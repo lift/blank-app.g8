@@ -14,7 +14,7 @@ resolvers ++= Seq(
 
 enablePlugins(JettyPlugin)
 
-unmanagedResourceDirectories in Test += baseDirectory.value / "src/main/webapp"
+Test / unmanagedResourceDirectories += baseDirectory.value / "src/main/webapp"
 
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
@@ -27,4 +27,4 @@ libraryDependencies ++= {
   )
 }
 
-scalacOptions in Test ++= Seq("-Yrangepos")
+Test / scalacOptions ++= Seq("-Yrangepos")
